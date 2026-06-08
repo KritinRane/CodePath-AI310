@@ -1,158 +1,120 @@
-# Contribution [#]: [Issue Title]
+# Contribution 1: Finish incomplete modules (typeshed)
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** 1  
+**Student:** Kritin Rane  
+**Issue:** https://github.com/python/typeshed/issues/14031  
+**Status:** Phase I — In Progress
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose this issue because it sits at the intersection of Python and type systems, two areas I want to get more comfortable with. Type annotations are increasingly expected in production Python codebases, and contributing to typeshed — the official source of truth for Python type stubs — is a concrete way to build that knowledge while making a real impact on the ecosystem.
+
+This issue is also well-structured for a first-time contributor. Rather than requiring deep knowledge of a single codebase, it's a collection of self-contained sub-tasks — each incomplete module is its own scope of work. That means I can pick one module, focus on it entirely, and produce a clean, reviewable contribution without getting lost in a massive unfamiliar system. I expect to learn how `.pyi` stub files work, how the Python type system represents standard library APIs, and what a high-quality open source review process looks like in practice.
 
 ---
 
 ## Understanding the Issue
 
 ### Problem Description
-
-[In your own words, what's broken or missing?]
+Several modules in typeshed are marked as incomplete. These modules contain a module-level `__getattr__` function with an "incomplete module" comment, which acts as a catch-all placeholder. This means type checkers like mypy and pyright cannot provide accurate type information for the functions and classes in those modules.
 
 ### Expected Behavior
-
-[What should happen?]
+Every public function, class, and constant in a module should have a fully typed `.pyi` stub so that type checkers can accurately validate code that uses those modules.
 
 ### Current Behavior
-
-[What actually happens?]
+Incomplete modules fall back to returning `Any` for anything not explicitly defined, effectively disabling type checking for those parts of the standard library or third-party packages.
 
 ### Affected Components
-
-[Which parts of the codebase are involved?]
+- `.pyi` stub files inside `stdlib/` or `stubs/` directories in the typeshed repository
+- Any module marked with an `__getattr__` + "incomplete module" comment
 
 ---
 
 ## Reproduction Process
 
 ### Environment Setup
-
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
+[To be filled in during Phase II]
 
 ### Steps to Reproduce
-
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+[To be filled in during Phase II]
 
 ### Reproduction Evidence
-
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
+[To be filled in during Phase II]
 
 ---
 
 ## Solution Approach
 
 ### Analysis
-
-[Your analysis of the root cause - what's causing the issue?]
+[To be filled in during Phase II]
 
 ### Proposed Solution
-
-[High-level description of your fix approach]
+[To be filled in during Phase II]
 
 ### Implementation Plan
 
-Using UMPIRE framework (adapted):
+**Using UMPIRE framework (adapted):**
 
-**Understand:** [Restate the problem]
-
-**Match:** [What similar patterns/solutions exist in the codebase?]
-
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
-
-**Implement:** [Link to your branch/commits as you work]
-
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
-
-**Evaluate:** [How will you verify it works?]
+- **Understand:** [To be filled in during Phase II]
+- **Match:** [To be filled in during Phase II]
+- **Plan:** [To be filled in during Phase II]
+- **Implement:** [To be filled in during Phase II]
+- **Review:** [To be filled in during Phase II]
+- **Evaluate:** [To be filled in during Phase II]
 
 ---
 
 ## Testing Strategy
 
 ### Unit Tests
-
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+- [ ] Test case 1: [To be filled in during Phase II]
+- [ ] Test case 2: [To be filled in during Phase II]
 
 ### Integration Tests
-
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+- [ ] Integration scenario 1: [To be filled in during Phase II]
 
 ### Manual Testing
-
-[What you tested manually and results]
+[To be filled in during Phase II]
 
 ---
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week 1 Progress
+[To be filled in]
 
-[What you built this week, challenges faced, decisions made]
+---
 
-### Week [Y] Progress
+## Code Changes
 
-[Continue documenting as you work]
-
-### Code Changes
-
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Files modified:** [To be filled in]
+- **Key commits:** [To be filled in]
+- **Approach decisions:** [To be filled in]
 
 ---
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
-
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
-
-**Maintainer Feedback:**
-- [Date]: [Summary of feedback received]
-- [Date]: [How you addressed it]
-
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+- **PR Link:** [To be filled in]
+- **PR Description:** [To be filled in]
+- **Maintainer Feedback:** [To be filled in]
+- **Status:** [To be filled in]
 
 ---
 
 ## Learnings & Reflections
 
 ### Technical Skills Gained
-
-[What you learned technically]
+[To be filled in]
 
 ### Challenges Overcome
-
-[What was hard and how you solved it]
+[To be filled in]
 
 ### What I'd Do Differently Next Time
+[To be filled in]
 
-[Reflection on your process]
-
----
-
-## Resources Used
-
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
-- [GitHub issues or discussions that helped]
+### Resources Used
+- https://github.com/python/typeshed/blob/main/CONTRIBUTING.md
+- https://github.com/python/typeshed/issues/14031
